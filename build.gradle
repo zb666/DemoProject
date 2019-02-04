@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.61'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task bob {
+    println(" 占位符号：${it}")
+}
+
+//闭包 类似rn中万物届是组件
+def clouser = {
+//    String name -> println "Hello Groovy ${name}"
+    println "Hello,${it}"
+}
+
+def sum = 0
+for (i in ['lili':1,'luck':2]){
+    //groovy中map集合的遍历如下
+    sum+=i.value
+}
+println("sum：${sum}")
+//闭包的调用 1.
+clouser.call('闭包的调用')
+//
+def name = "没有申明参数的话，默认就是it去接受形式参数"
+clouser(name)
+
+//三引号用以一些格式化的输出 但是还是会保留比如\n\r等操作符.
+def threeYingHao = """
+三引号不参与转意
+hello
+这里的字符串
+不参与转意的过程
+wfewfew
+fewfewfew换行
+"""
+println(threeYingHao)
