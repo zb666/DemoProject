@@ -37,9 +37,9 @@ def clouser = {
 }
 
 def sum = 0
-for (i in ['lili':1,'luck':2]){
+for (i in ['lili': 1, 'luck': 2]) {
     //groovy中map集合的遍历如下
-    sum+=i.value
+    sum += i.value
 }
 println("sum：${sum}")
 //闭包的调用 1.

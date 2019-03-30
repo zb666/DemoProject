@@ -7,34 +7,45 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvJumpService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="开启服务"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="关闭服务"
+        app:layout_constraintLeft_toLeftOf="@+id/tvJumpService"
+        app:layout_constraintTop_toBottomOf="@+id/tvJumpService" />
+
     <WebView
         android:id="@+id/webview"
+        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="100dp" />
 
     <TextView
         android:id="@+id/tvWait"
-        app:layout_constraintLeft_toLeftOf="@+id/webview"
-        app:layout_constraintTop_toBottomOf="@+id/webview"
-        android:text="method of wait"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="method of wait"
+        app:layout_constraintLeft_toLeftOf="@+id/webview"
+        app:layout_constraintTop_toBottomOf="@+id/webview" />
 
     <TextView
         android:id="@+id/tvNotify"
-        app:layout_constraintLeft_toLeftOf="@+id/tvWait"
-        app:layout_constraintTop_toBottomOf="@+id/tvWait"
-        android:text="使method of notify"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:text="使method of notify"
+        app:layout_constraintLeft_toLeftOf="@+id/tvWait"
+        app:layout_constraintTop_toBottomOf="@+id/tvWait" />
 </android.support.constraint.ConstraintLayout>

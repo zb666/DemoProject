@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         webview.settings.javaScriptEnabled =true
+        tvJumpService.setOnClickListener {
+            var intent = Intent(this,DemoActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
